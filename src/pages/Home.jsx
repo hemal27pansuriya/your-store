@@ -1,4 +1,4 @@
-import { ChevronRight, Heart, Menu, Search, ShoppingCart } from 'lucide-react'
+import { ArrowRight, ChevronRight, Heart, Menu, Search, ShoppingCart } from 'lucide-react'
 
 const Home = () => {
     const categories = [
@@ -53,18 +53,68 @@ const Home = () => {
             </header >
 
             {/* Hero Section */}
-            <section className='bg-blue-600 text-white py-16'>
-                <div className='container mx-auto px-10'>
-                    <div className='max-w-2xl'>
-                        <h1 className='text-4xl font-bold mb-4'>Welcome to YourStore</h1>
-                        <p className='text-xl mb-8'>Discover amazing products at great prices</p>
-                        <a
-                            href="/shop"
-                            className='bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-100'
-                        >
-                            Shop Now
-                        </a>
+            <section className='relative bg-gradient-to-r from-blue-600 to-blue-800 text-white'>
+                {/* Background Pattern */}
+                <div className='absolute inset-0 opacity-10'>
+                    <div className='w-full h-full' style={{
+                        backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
+                        backgroundSize: '40px 40px'
+                    }}></div>
+                </div>
+                <div className='container mx-auto px-10 py-20'>
+                    <div className="flex flex-col lg:flex-row items-center justify-between">
+                        <div className='max-w-2xl lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0'>
+                            <h1 className='text-5xl font-bold mb-6 leading-tight'>
+                                Discover your life style requirements
+                            </h1>
+                            <p className='text-xl mb-8 text-blue-100'>
+                                Explore our curated collection of premium products at unbeatable prices.
+                                Get up to 50% off on new arrivals.
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                                <a
+                                    href="/shop"
+                                    className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition duration-200 flex items-center justify-center group"
+                                >
+                                    Shop Now
+                                    <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+                                </a>
+                                <a
+                                    href="/categories"
+                                    className='bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition duration-200'
+                                >
+                                    Browse Categories
+                                </a>
+                            </div>
+                        </div>
+
+                        {/* Hero Image */}
+                        <div className='lg:w-1/2 flex justify-center'>
+                            <div className='relative'>
+                                <img
+                                    src="https://images.unsplash.com/photo-1740130768424-10c4fb1daaac?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0MHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="Featured Products"
+                                    className='rounded-lg shadow-2xl'
+                                />
+
+                                {/* Floating Stats Card */}
+                                <div className='absolute bg-white -bottom-6 -left-6 text-gray-800 p-6 rounded-lg shadow-xl'>
+                                    <div className='flex items-center gap-4'>
+                                        <div className='text-center'>
+                                            <p className='text-3xl font-bold text-blue-600'>50k+</p>
+                                            <p className='text-sm text-gray-600'>Products</p>
+                                        </div>
+                                        <div className='w-px h-12 bg-gray-200'></div>
+                                        <div className='text-center'>
+                                            <p className='text-3xl font-bold text-blue-600'>98%</p>
+                                            <p className='text-sm text-gray-600'>Happy Customers</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </section>
 
