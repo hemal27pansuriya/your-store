@@ -74,14 +74,17 @@ const Home = () => {
                             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                                 <a
                                     href="/shop"
-                                    className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition duration-200 flex items-center justify-center group"
+                                    className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold 
+                           transform transition-all duration-300 ease-in-out
+                            hover:scale-105 hover:shadow-lg active:scale-95"
                                 >
                                     Shop Now
-                                    <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+                                    <ArrowRight className="ml-2" size={20} />
                                 </a>
                                 <a
                                     href="/categories"
-                                    className='bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition duration-200'
+                                    className='bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold
+                                    transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg active:scale-95'
                                 >
                                     Browse Categories
                                 </a>
@@ -150,7 +153,7 @@ const Home = () => {
                                 href={`/product/${product.id}`}
                                 className='group'
                             >
-                                <div className='bg-white rounded-lg shadow-sm hover:shadow-md transition duration-200'>
+                                <div className='bg-white rounded-lg shadow-sm hover:shadow-lg transition duration-200'>
                                     <img
                                         src={product.image}
                                         alt={product.name}
